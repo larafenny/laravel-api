@@ -16,8 +16,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //prendo tutti i post
-        $posts = Post::all();
+        //prendo tutti i post agganciandosi con le categorie
+        $posts = Post::with('category')->get();
 
         $result = ['result'=>$posts, 'success'=>true];
         //genero un json con i post

@@ -52,6 +52,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
+        //dd($id);
         $category = Category::find($id);
         $result = ['result'=>$category, 'success'=>true];
         //genero un json con le categorie
