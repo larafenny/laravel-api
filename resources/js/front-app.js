@@ -16,7 +16,8 @@ window.axios.get('http://127.0.0.1:8000/api/posts').then(result=>{
     console.log(error);
 })
 
-//window.Vue = require('vue');
+//abilitiamo vue
+window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -37,8 +38,12 @@ window.axios.get('http://127.0.0.1:8000/api/posts').then(result=>{
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-/*
+import AppComponent from './app/AppComponent'
+//AppComponent = require('./app/AppComponent.vue').default
+
 const app = new Vue({
     el: '#app',
+    render: (h) => h(AppComponent)
 });
-*/
+
+//console.log(app);
